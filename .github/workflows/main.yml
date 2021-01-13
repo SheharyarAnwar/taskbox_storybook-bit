@@ -50,4 +50,4 @@ jobs:
         run: sudo cp ./storybook-static/index.html ./storybook-static/200.html && sudo rm ./storybook-static/index.html
 
       - name: Deploy Storybook on Surge
-        run: surge ./build --token ${{secrets.SURGE_TOKEN}} --domain https://taskbox-storybook-sheharyar.surge.sh
+        run: surge ./storybook-static --token ${{secrets.SURGE_TOKEN}} --domain https://taskbox-storybook-sheharyar.surge.sh
