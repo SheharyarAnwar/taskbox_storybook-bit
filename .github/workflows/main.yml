@@ -28,7 +28,7 @@ jobs:
       - name: Configure Bit
         run: npm config set @bit:registry https://node.bit.dev
 
-      - name: Installing Node
+      - name: Installing Dependencies
         run: npm install
 
       - name: Install Surge
@@ -44,7 +44,7 @@ jobs:
         run: surge ./build --token ${{secrets.SURGE_TOKEN}} --domain https://taskbox-sheharyar.surge.sh
 
       - name: Create build for Storybook
-        run: npm run build-Storybook
+        run: npm run build-storybook
 
       - name: Rename the index.html file to 200.html
         run: sudo cp ./storybook-static/index.html ./storybook-static/200.html && sudo rm ./storybook-static/index.html
