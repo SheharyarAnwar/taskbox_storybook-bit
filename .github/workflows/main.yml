@@ -31,6 +31,9 @@ jobs:
       - name: Install Surge
         run: npm i -g surge
 
+      - name: Configure Bit
+        run: npm config set @bit:registry https://node.bit.dev
+
       - name: Create Build
         run: CI=false npm run build
         # Rename the index.html file to 200.html
