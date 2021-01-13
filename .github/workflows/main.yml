@@ -25,14 +25,14 @@ jobs:
           node-version: "12"
           check-latest: true
 
+      - name: Configure Bit
+        run: npm config set @bit:registry https://node.bit.dev
+
       - name: Installing Node
         run: npm install
 
       - name: Install Surge
         run: npm i -g surge
-
-      - name: Configure Bit
-        run: npm config set @bit:registry https://node.bit.dev
 
       - name: Create Build
         run: CI=false npm run build
