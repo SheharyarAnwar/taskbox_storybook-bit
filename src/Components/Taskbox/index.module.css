@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  width: 250px;
+  height: 50px;
+  background-color: rgb(175, 191, 245);
+  border-bottom: 2px solid white;
+}
+.root:hover {
+  background-color: rgb(194, 205, 241);
+}
+.display {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+.display p {
+  line-height: 0.2;
+}
+.display input {
+  margin-right: 10px;
+}
+.blue {
+  fill: rgb(245, 228, 169);
+}
